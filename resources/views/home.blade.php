@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       @vite(['resources/css/app.css', 'resources/js/app.js'])       
+       <title>SmartOnline</title>
+</head>
+<body class="bg-blue-900">
+
+    <nav class="bg-white mx-auto mt-6 max-w-6xl rounded-full flex items-center justify-between px-5 py-3 shadow-lg">
+        <!-- logonyh -->
+        <div class="text-xl font-bold text-blue-900">
+            <span class="bg-blue-900 text-white px-3 py-1 rounded-full">
+                SMART <span class="text-blue-300">ONLINE</span>
+            </span>
+        </div>
+
+        <!-- menu -->
+        <ul class="flex items-center gap-20 fs-5 font-semibold text-blue-900">
+            <li> <a href="#" class="hover:text">HOME</a> </li>
+            <li> <a href="#">SOLUSI</a> </li>
+            <li> <a href="#">BLOG</a> </li>
+            <li> <a href="#">HARGA</a> </li>
+        </ul>
+
+        <!-- wangsap -->
+        <a href="#" class="flex items-center gap-2 bg-blue-900 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-md transition-all">
+            <img src="https://img.icons8.com/color/24/000000/whatsapp--v1.png" alt="WhatsApp" />
+            <span>Let's Talk</span>
+        </a>
+    </nav>
+
+
+    
+    <div class="container mx-auto mt-10 max-w-6xl text-white">
+        <h1 class="text-6xl font-semibold tracking-wide">Partner kolaborasi produktifitas perusahaan anda</h1>
+    </div>
+
+    <div class="container mx-auto mt-10 max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="flex flex-col items-center">
+                <img src="/image/image.png" alt="Gambar" class="w-full h-auto rounded-lg shadow-lg">
+                <a href="#" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg transition-all">
+                    Request Demo
+                </a>
+            </div>
+
+            <div class="text-white">
+                <h1 class="text-4xl font-semibold tracking-wide mb-4"> Pengembangan system </h1>
+                    <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
+                <h1 class="text-4xl font-semibold tracking-wide mb-4"> Pengembangan system </h1>
+                    <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
+                <h1 class="text-4xl font-semibold tracking-wide mb-4"> Pengembangan system </h1>
+                    <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
+
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>        
