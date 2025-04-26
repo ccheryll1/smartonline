@@ -21,3 +21,8 @@ Route::get('/blog', function () {
 Route::get('/solusi', function () {
     return view('solusi');
 });
+
+Route::get('/footer', function () {
+    return view('footer');
+});
+
