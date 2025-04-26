@@ -46,14 +46,16 @@
                 </a>
             </div>
 
-            <div class="text-white">
-                <h1 class="text-4xl font-semibold tracking-wide mb-4"> Pengembangan system </h1>
-                    <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
-                <h1 class="text-4xl font-semibold tracking-wide mb-4"> Pengembangan system </h1>
-                    <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
-                <h1 class="text-4xl font-semibold tracking-wide mb-4"> Pengembangan system </h1>
+        <!-- BENERIN DI SINI -->
+        <div class="text-white h-full flex flex-col justify-center">
+            <h1 class="text-4xl font-semibold tracking-wide mb-3"> Pengembangan system </h1>
                     <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
 
+            <h1 class="text-4xl font-semibold tracking-wide mb-3 mt-7"> Berlangganan per bulan </h1>
+            <p class="text-lg"> Pilih fitur aplikasi sesuai kebutuhan perusahaan anda </p>
+
+            <h1 class="text-4xl font-semibold tracking-wide mb-3 mt-8"> Design ulang aplikasi anda </h1>
+            <p class="text-lg"> Improve the performance of an application by re-design your UI application system </p>
             </div>
         </div>
     </div>
