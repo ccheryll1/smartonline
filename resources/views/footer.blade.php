@@ -8,14 +8,10 @@
 </head>
 <body>
        <footer class="bg-gray-800 text-gray-300">
-              <div class="mx-25 flex flex-row py-25 space-x-9">
-                     <div>
-
-                     </div>
-
+              <div class="mx-25 flex flex-row py-15 space-x-9">
                      <div class="w-150 text-lg ">
-                            <p> Aplikasi chat task kantor untuk komunikasi dan kolaborasi yang dilengkapi smart personalia untuk membantu pengelolaan komunikasi internal perusahaan yang efektif dan efisien. </p>
-                            <p> Jakarta Office <br> Eco Selaras Sahid Sudirman Residence Lt.2 Jl. Jend. Sudirman No.86, Jakarta Pusat - 12850 </p>
+                            <p class="mb-5"> Aplikasi chat task kantor untuk komunikasi dan kolaborasi yang dilengkapi smart personalia untuk membantu pengelolaan komunikasi internal perusahaan yang efektif dan efisien. </p>
+                            <p class="mb-3"> Jakarta Office <br> Eco Selaras Sahid Sudirman Residence Lt.2 Jl. Jend. Sudirman No.86, Jakarta Pusat - 12850 </p>
                             <a href="#"> Call & Whatsapp : +62 811-990-1612</a>
                      </div>
 
@@ -41,6 +37,11 @@
                             <a href="#" class="bg-green-900 px-5 py-3 rounded-2xl"> Daftar Sekarang! </a>
                      </div>
               </div>
+              <div class="mx-25 py-3 flex flex-row justify-between border-t border-white/20">
+                     <p> SMART ONLINE powered by <span class="text-yellow-300">Ide Maju Bersama</span></p>
+                     <p> Copyright ©2022. All Rights Reserved.</p>
+              </div>
+
        </footer>
 </body>
 </html>
