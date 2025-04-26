@@ -46,7 +46,7 @@
                 </a>
         </div>
 
-        <!-- BENERIN DI SINI -->
+        
         <div class="text-white h-full flex flex-col justify-center">
             <h1 class="text-4xl font-semibold tracking-wide mb-3"> Pengembangan system </h1>
             <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
