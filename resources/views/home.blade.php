@@ -18,7 +18,7 @@
 
         <!-- menu -->
         <ul class="flex items-center gap-20 fs-5 font-semibold text-blue-900">
-            <li> <a href="#" class="hover:text">HOME</a> </li>
+            <li> <a href="#">HOME</a> </li>
             <li> <a href="#">SOLUSI</a> </li>
             <li> <a href="#">BLOG</a> </li>
             <li> <a href="#">HARGA</a> </li>
@@ -41,12 +41,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div class="flex flex-col items-center">
             <img src="/image/image.png" alt="Gambar" class="w-full h-auto rounded-lg shadow-lg">
-                <a href="#" class="mt-6 bg-white text-blue-500 hover:bg-blue-500 hover:text-white px-30 py-3 rounded-full shadow-lg transition-all">
+                <a href="#" class="mt-6 bg-white text-blue-500 hover:bg-blue-500 hover:text-white px-30 py-3 rounded-full shadow-lg hover:shadow-5xl hover:shadow-gray-900/50 transition-all duration-270">
                     Request Demo
                 </a>
         </div>
 
-        
+
         <div class="text-white h-full flex flex-col justify-center">
             <h1 class="text-4xl font-semibold tracking-wide mb-3"> Pengembangan system </h1>
             <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
