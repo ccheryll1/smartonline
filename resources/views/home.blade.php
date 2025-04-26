@@ -41,7 +41,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div class="flex flex-col items-center">
             <img src="/image/image.png" alt="Gambar" class="w-full h-auto rounded-lg shadow-lg">
+<<<<<<< HEAD
                 <a href="#" class="mt-6 bg-white text-blue-500 hover:bg-blue-500 hover:text-white hover:font-bold px-30 py-3 rounded-full shadow-lg hover:shadow-5xl hover:shadow-gray-900/50 transition-all duration-100">
+=======
+                <a href="#" class="mt-6 bg-white text-blue-500 hover:bg-blue-500 hover:text-white px-30 py-3 rounded-full shadow-lg hover:shadow-5xl hover:shadow-gray-900/50 transition-all duration-270">
+>>>>>>> a845f0230d7c7eaab2bdebb95020ed41e5e23684
                     Request Demo
                 </a>
         </div>
