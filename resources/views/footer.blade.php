@@ -19,8 +19,8 @@
                      </div>
 
                      <div>
-                            <h1 class="text-2xl font-semibold tracking-wide">Company</h1>
-                            <ul>
+                            <h1 class="text-2xl font-semibold tracking-wide mb-5">Company</h1>
+                            <ul class="space-y-2">
                                    <li> <a href="#"> Home </a> </li>
                                    <li> <a href="#"> Overview </a> </li>
                                    <li> <a href="#"> Blog </a> </li>
@@ -28,13 +28,13 @@
                             </ul>
                      </div>
                      <div>
-                            <h1 class="text-2xl font-semibold tracking-wide">Quick Links</h1>
+                            <h1 class="text-2xl font-semibold tracking-wide mb-5">Quick Links</h1>
                             <ul>
                                    <li> <a href="#"> Privacy Policy </a> </li>
                             </ul>
                      </div>
                      <div class="w-100">
-                            <h1 class="text-2xl font-semibold tracking-wide">Work Hours</h1>
+                            <h1 class="text-2xl font-semibold tracking-wide mb-5">Work Hours</h1>
                             <p>9 AM - 4PM, Monday - Friday</p>
                             <p>Dapatkan akses Teng-Go untuk membantu pengelolaan komunikasi & personalia HR</p>
                             <a href="#" class="bg-green-900 px-5 py-3 rounded-2xl"> Daftar Sekarang! </a>
