@@ -10,15 +10,14 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/blog', function () {
-    return view('blog');
-});
-
 Route::get('/harga', function () {
     return view('harga');
 });
 
+Route::get('/blog', function () {
+    return view('blog');
+});
 
 Route::get('/solusi', function () {
-    return view('home');
+    return view('solusi');
 });
