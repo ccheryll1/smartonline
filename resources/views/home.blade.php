@@ -61,5 +61,7 @@
 </div>
 
     
+    @include('blog')
+
 </body>
 </html>        
