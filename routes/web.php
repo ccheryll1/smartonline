@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/frame33', function () {
+    return view('frame33');
+});
