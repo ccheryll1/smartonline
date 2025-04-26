@@ -66,6 +66,8 @@
         </div>
     </footer>    
 
+    
+    @include('harga')
 
 </body>
 </html>        
