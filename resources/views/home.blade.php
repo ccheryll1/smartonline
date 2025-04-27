@@ -61,12 +61,6 @@
         </div>
     </div>
 </div>
-    <footer>
-        <div class="bg-gray-600">
-
-        </div>
-    </footer>    
-
     
     @include('harga')
     @include('footer')
