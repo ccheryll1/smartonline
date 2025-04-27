@@ -45,7 +45,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Kolom laptop + button -->
             <div class="flex flex-col items-center">
-                <img src="/image/image.png" alt="Gambar" class="w-full h-auto rounded-lg shadow-lg max-w-[500px] mb-8">
+                <img src="/image/laptop.png" alt="Gambar" class="w-full h-auto rounded-lg shadow-lg max-w-[500px] mb-8">
                 <a href="#" class="bg-white text-blue-500 hover:bg-blue-500 hover:text-white px-25 py-3 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300">
                     Request Demo
                 </a>

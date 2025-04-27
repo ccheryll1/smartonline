@@ -35,11 +35,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                     <!-- Image Section -->
                     <div class="bg-white rounded-3xl p-6">
-                        <img src="{{ asset('images/collaboration.png') }}" alt="Collaboration Illustration" class="w-full h-auto">
+                        <img src="/image/imageharga.png" alt="Collaboration Illustration" class="w-full h-auto">
                     </div>
-                    <!-- Form Section -->
+                    <!-- Form Section - disabled smuasmua-->  
                     <div class="bg-white rounded-3xl p-6 space-y-4">
-                        <input type="email" placeholder="Work Email*" class="w-full p-3 border border-gray-300 rounded-lg" disabled>
+                        <input type="email" placeholder="Work Email*" class="w-full p-3 border border-gray-300 rounded-lg" >
                         <div class="grid grid-cols-2 gap-4">
                             <input type="text" placeholder="First name*" class="w-full p-3 border border-gray-300 rounded-lg" disabled>
                             <input type="text" placeholder="Last name*" class="w-full p-3 border border-gray-300 rounded-lg" disabled>
@@ -62,16 +62,19 @@
 
         <!-- Apps Section -->
         <div class="container mx-auto max-w-5xl mt-10 px-6">
+            <div class="mb-3">
+                <h1 class="text-3xl font-bold"> Aplikasi layanan kami</h1>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white text-blue-900 p-6 rounded-xl shadow-lg text-center">
+                <div class="bg-white text-blue-900 p-6 rounded-xl shadow-xl text-center hover:shadow-xl/30">
                     <h3 class="text-xl font-semibold mb-3">Smart Accounting</h3>
                     <p>Aplikasi accounting untuk kebutuhan perusahaan anda</p>
                 </div>
-                <div class="bg-white text-blue-900 p-6 rounded-xl shadow-lg text-center">
+                <div class="bg-white text-blue-900 p-6 rounded-xl shadow-lg text-center hover:shadow-xl/30">
                     <h3 class="text-xl font-semibold mb-3">Smart HRIS</h3>
                     <p>Aplikasi HRIS untuk kebutuhan perusahaan anda</p>
                 </div>
-                <div class="bg-white text-blue-900 p-6 rounded-xl shadow-lg text-center">
+                <div class="bg-white text-blue-900 p-6 rounded-xl shadow-lg text-center hover:shadow-xl/30">
                     <h3 class="text-xl font-semibold mb-3">Smart POS</h3>
                     <p>Aplikasi POS untuk kebutuhan perusahaan anda</p>
                 </div>
