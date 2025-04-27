@@ -32,7 +32,7 @@
     </nav>
 
     <!-- buat ngasih jarak karena nav fixed -->
-    <div class="h-32"></div>
+    <div class="h-32"></div>    
 
     <!-- Content Section -->
     <div class="container mx-auto max-w-6xl text-white mt-10">
