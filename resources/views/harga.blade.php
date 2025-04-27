@@ -6,7 +6,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Harga - SmartOnline</title>
 </head>
-<body class="bg-white text-blue-900">
+<body class="bg-white text-blue-900 ">
     <!-- Navigation -->
     {{-- <nav class="bg-white mx-auto mt-6 max-w-6xl rounded-full flex items-center justify-between px-5 py-3 shadow-lg">
         <div class="text-xl font-bold text-blue-900">
