@@ -35,7 +35,7 @@ Route::get('/footer', function () {
 
 
 //crud absensi
-Route::get('/', [AttendanceController::class, 'index'])->name('attendances.index');
+Route::get('/attendances', [AttendanceController::class, 'index'])->name('attendances.index'); // Ganti dari '/' ke '/attendances'
 Route::get('/attendances/create', [AttendanceController::class, 'create'])->name('attendances.create');
 Route::post('/attendances', [AttendanceController::class, 'store'])->name('attendances.store');
 Route::get('/attendances/{attendance}/edit', [AttendanceController::class, 'edit'])->name('attendances.edit');
