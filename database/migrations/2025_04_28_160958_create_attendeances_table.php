@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('attendeances', function (Blueprint $table) {
             $table->id();
+            $table->string('employee_name');
+            $table->dateTime('clock_in')->nullable();
+            $table->dateTime('clock_out')->nullable();
+            $table->integer('overtime')->default(0); // dalam menit
+            $table->string('location')->nullable();
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }
