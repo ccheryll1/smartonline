@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AttendanceController;
 
+//ini dummy cuma buat preview
+Route::get('/preview', function () {
+    return view('preview');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
