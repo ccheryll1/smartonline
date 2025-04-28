@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Attendance;
-use App\Models\Attendeance;
 use Illuminate\Http\Request;
 
 
@@ -10,7 +10,7 @@ class AttendanceController extends Controller
 {
     public function index()
     {
-        $attendances = Attendeance::all();
+        $attendances = Attendance::all();
         
         // Hitung summary
         $present = $attendances->whereNotNull('clock_in')->count();
@@ -38,16 +38,16 @@ class AttendanceController extends Controller
             'notes' => 'nullable|string',
         ]);
 
-        Attendeance::create($request->all());
+        Attendance::create($request->all());
         return redirect()->route('attendances.index')->with('success', 'Attendance added successfully');
     }
 
-    public function edit(Attendeance $attendance)
+    public function edit(Attendance $attendance)
     {
         return view('attendances.edit', compact('attendance'));
     }
 
-    public function update(Request $request, Attendeance $attendance)
+    public function update(Request $request, Attendance $attendance)
     {
         $request->validate([
             'employee_name' => 'required',
@@ -62,7 +62,7 @@ class AttendanceController extends Controller
         return redirect()->route('attendances.index')->with('success', 'Attendance updated successfully');
     }
 
-    public function destroy(Attendeance $attendance)
+    public function destroy(Attendance $attendance)
     {
         $attendance->delete();
         return redirect()->route('attendances.index')->with('success', 'Attendance deleted successfully');
