@@ -67,6 +67,7 @@
 
     </div>
     
+    @include('solusi')
     @include('harga')
     @include('footer')
 </body>
