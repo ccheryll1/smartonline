@@ -6,6 +6,9 @@
     <title>Time Management</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Impor Google Fonts -->
+      <!-- opsi 1 -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet"> -->
+     <!-- opsi 2 -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
         .card {
@@ -40,7 +43,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <span class="logo">LOGO</span> <span class="time-management">Time Management</span>
+                <span class="logo">LOGO </span> <span class="time-management">Time Management</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
