@@ -8,7 +8,7 @@
             <div class="card-body">
                 <h6 class="text-muted">Present Summary</h6>
                 <h3 class="mb-0">{{ $present }}</h3>
-                <small class="text-muted">12 vs yesterday</small>
+                <!-- <small class="text-muted">12 vs yesterday</small> -->
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
             <div class="card-body">
                 <h6 class="text-muted">Late Clock-In</h6>
                 <h3 class="mb-0">{{ $late }}</h3>
-                <small class="text-muted">4 vs yesterday</small>
+                <!-- <small class="text-muted">4 vs yesterday</small> -->
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
             <div class="card-body">
                 <h6 class="text-muted">Early Clock-In</h6>
                 <h3 class="mb-0">{{ $early }}</h3>
-                <small class="text-muted">0 vs yesterday</small>
+                <!-- <small class="text-muted">0 vs yesterday</small> -->
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
             <div class="card-body">
                 <h6 class="text-muted">Absent</h6>
                 <h3 class="mb-0">{{ $absent }}</h3>
-                <small class="text-muted">2 vs yesterday</small>
+                <!-- <small class="text-muted">2 vs yesterday</small> -->
             </div>
         </div>
     </div>
