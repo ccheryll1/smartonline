@@ -38,20 +38,20 @@
         <div class="collapse navbar-collapse justify-content-center position-absolute top-50 start-50 translate-middle" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/attendances">Attendance</a>
+                    <a class="nav-link active" href="/attendances">Absensi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Overtime</a>
+                    <a class="nav-link" href="#">Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Picture</a>
+                    <a class="nav-link" href="#">Lokasi</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Location</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Notes</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
