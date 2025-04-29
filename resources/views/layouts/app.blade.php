@@ -6,9 +6,6 @@
     <title>Time Management</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Impor Google Fonts -->
-      <!-- opsi 1 -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet"> -->
-     <!-- opsi 2 -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
         .card {
@@ -36,34 +33,45 @@
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
         }
+        /* Pastikan menu di tengah tetap rapi */
+        .navbar-nav {
+            gap: 15px; /* Jarak antar menu */
+        }
+        @media (max-width: 991px) {
+            /* Atur posisi menu di mobile */
+            .navbar-collapse {
+                position: static !important;
+                transform: none !important;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-relative">
         <div class="container-fluid">
+            <!-- Logo tetap normal di kiri -->
             <a class="navbar-brand" href="#">
-                <span class="logo">LOGO </span> <span class="time-management">Time Management</span>
+                <span class="logo">LOGO</span> <span class="time-management">Time Management</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <!-- Toggler untuk mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+
+            <!-- Menu dibuat absolute tengah -->
+            <div class="collapse navbar-collapse justify-content-center position-absolute top-50 start-50 translate-middle" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/attendances">Attendance</a>
+                        <a class="nav-link active" href="/attendances">Absensi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Overtime</a>
+                        <a class="nav-link" href="#">Employee</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Picture</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Notes</a>
+                        <a class="nav-link" href="#">Lokasi</a>
                     </li>
                 </ul>
             </div>
