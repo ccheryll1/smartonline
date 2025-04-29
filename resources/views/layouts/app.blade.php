@@ -23,33 +23,40 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">LOGO TIME MANAGEMENT</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/attendances">Attendance</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Overtime</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Picture</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Notes</a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-relative">
+    <div class="container-fluid">
+        <!-- Logo tetap normal di kiri -->
+        <a class="navbar-brand" href="#">LOGO TIME MANAGEMENT</a>
+
+        <!-- Toggler untuk mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu dibuat absolute tengah -->
+        <div class="collapse navbar-collapse justify-content-center position-absolute top-50 start-50 translate-middle" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/attendances">Attendance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Overtime</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Picture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Location</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Notes</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Main Content -->
     <div class="container mt-4">
