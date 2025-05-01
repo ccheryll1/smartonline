@@ -4,77 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Management</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Impor Tailwind CSS v4 via CDN -->
+    <script src="https://cdn.tailwindcss.com/4.0.0-alpha.1"></script>
     <!-- Impor Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-
-    {{-- tailwind v4 css CDN --}}
-    <script src="https://cdn.tailwindcss.com/4.0.0-alpha.1"></script>
-    <style>
-        .card {
-            border-radius: 10px;
-        }
-        .table th {
-            background-color: #f8f9fa;
-        }
-        .table-hover tbody tr:hover {
-            background-color: #f1f3f5;
-        }
-        .rounded-circle {
-            width: 30px;
-            height: 30px;
-        }
-        /* Styling untuk logo di navbar */
-        .navbar-brand {
-            font-size: 1.5rem;
-        }
-        .navbar-brand .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-        .navbar-brand .time-management {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-        }
-        /* Pastikan menu di tengah tetap rapi */
-        .navbar-nav {
-            gap: 15px; /* Jarak antar menu */
-        }
-        @media (max-width: 991px) {
-            /* Atur posisi menu di mobile */
-            .navbar-collapse {
-                position: static !important;
-                transform: none !important;
-            }
-        }
-    </style>
+    <!-- Font Awesome untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 </head>
-<body>
+<body class="bg-gray-100 font-roboto">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-relative">
-        <div class="container-fluid">
-            <!-- Logo tetap normal di kiri -->
-            <a class="navbar-brand" href="#">
-                <span class="logo">LOGO</span> <span class="time-management">Time Management</span>
+    <nav class="bg-blue-600 text-white relative">
+        <div class="container mx-auto flex items-center justify-between py-4 px-4 lg:px-0">
+            <!-- Logo -->
+            <a href="#" class="text-xl font-bold">
+                <span class="font-montserrat font-bold">LOGO</span>
+                <span class="font-roboto">Time Management</span>
             </a>
 
             <!-- Toggler untuk mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="lg:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
             </button>
 
-            <!-- Menu dibuat absolute tengah -->
-            <div class="collapse navbar-collapse justify-content-center position-absolute top-50 start-50 translate-middle" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/attendances">Absensi</a>
+            <!-- Menu -->
+            <div class="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" id="navbarNav">
+                <ul class="flex gap-6">
+                    <li>
+                        <a href="/attendances" class="text-white hover:text-gray-200 font-medium">Absensi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Employee</a>
+                    <li>
+                        <a href="#" class="text-white hover:text-gray-200 font-medium">Employee</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Lokasi</a>
+                    <li>
+                        <a href="#" class="text-white hover:text-gray-200 font-medium">Lokasi</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Menu Mobile -->
+            <div class="lg:hidden hidden flex-col absolute top-full left-0 w-full bg-blue-600 p-4" id="navbarNav">
+                <ul class="flex flex-col gap-4">
+                    <li>
+                        <a href="/attendances" class="text-white hover:text-gray-200 font-medium">Absensi</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white hover:text-gray-200 font-medium">Employee</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white hover:text-gray-200 font-medium">Lokasi</a>
                     </li>
                 </ul>
             </div>
@@ -82,16 +74,17 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-4">
+    <div class="container mx-auto mt-6">
         @if (session('success'))
-            <div class="alert alert-success">
+            <div class="bg-green-100 text-green-700 p-4 rounded-lg mb-4">
                 {{ session('success') }}
             </div>
         @endif
-        <h3>Absensi</h3>
+        <h3 class="text-2xl font-semibold mb-4">Absensi</h3>
         @yield('content')
     </div>
 
+    <!-- Bootstrap JS (untuk toggler mobile) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
