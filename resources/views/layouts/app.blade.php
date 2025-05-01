@@ -7,21 +7,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Impor Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        .card {
-            border-radius: 10px;
+        /* Styling global */
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Roboto', sans-serif;
         }
-        .table th {
-            background-color: #f8f9fa;
+
+        /* Navbar */
+        .navbar {
+            background-color: #2563eb; /* Biru yang sama seperti tema sebelumnya */
         }
-        .table-hover tbody tr:hover {
-            background-color: #f1f3f5;
-        }
-        .rounded-circle {
-            width: 30px;
-            height: 30px;
-        }
-        /* Styling untuk logo di navbar */
         .navbar-brand {
             font-size: 1.5rem;
         }
@@ -33,22 +31,130 @@
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
         }
-        /* Pastikan menu di tengah tetap rapi */
         .navbar-nav {
-            gap: 15px; /* Jarak antar menu */
+            gap: 15px;
         }
         @media (max-width: 991px) {
-            /* Atur posisi menu di mobile */
             .navbar-collapse {
                 position: static !important;
                 transform: none !important;
             }
         }
+
+        /* Summary Cards */
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            background-color: #fff;
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-body h6 {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+        .card-body h3 {
+            font-size: 1.8rem;
+            color: #343a40;
+        }
+        .card-body small {
+            color: #adb5bd;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .filter-section .form-control {
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 8px 12px;
+        }
+        .filter-section .btn-outline-secondary {
+            border-radius: 6px;
+            padding: 8px 12px;
+        }
+
+        /* Tabel */
+        .table-container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .table {
+            margin-bottom: 0;
+        }
+        .table th {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            color: #6c757d;
+            padding: 12px;
+        }
+        .table tbody td {
+            padding: 12px;
+            vertical-align: middle;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-hover tbody tr:hover {
+            background-color: #f1f3f5;
+        }
+        .rounded-circle {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Tombol Edit dan Delete */
+        .btn-warning, .btn-danger {
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-warning {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #212529;
+        }
+        .btn-warning:hover {
+            background-color: #ffca2c;
+            border-color: #ffca2c;
+            color: #212529;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #e04b59;
+            border-color: #e04b59;
+        }
+
+        /* Tombol Add Attendance */
+        .btn-primary {
+            border-radius: 6px;
+            padding: 8px 16px;
+            font-weight: 500;
+            background-color: #2563eb;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            border-color: #1d4ed8;
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-relative">
+    <nav class="navbar navbar-expand-lg navbar-dark position-relative">
         <div class="container-fluid">
             <!-- Logo tetap normal di kiri -->
             <a class="navbar-brand" href="#">
