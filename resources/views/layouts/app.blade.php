@@ -8,7 +8,8 @@
     <!-- Impor Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 
-    
+    {{-- tailwind v4 css CDN --}}
+    <script src="https://cdn.tailwindcss.com/4.0.0-alpha.1"></script>
     <style>
         .card {
             border-radius: 10px;
