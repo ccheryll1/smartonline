@@ -9,7 +9,7 @@
 
 <body>
        <div class="bg-blue-100 min-h-screen py-15 px-25">
-              <div class="flex items-center justify-between gap-10 mt-5">
+              <div class="flex items-center justify-between gap-10 mt-20">
                      <div class="w-1/2 ">
                             <div class="mt-5">
                                    <h1 class="text-[35px] text-black font-semibold  w-160"> Make Better Collaboration, Achieve Productivity in Just One Place</h1>
@@ -32,23 +32,64 @@
        </div>
 
        <div class="bg-green-100 min-h-screen py-15 px-25">
-              <!-- <div class="w-1/2 rounded-2xl">
-                     <img src="/image/solusi2.png" alt="" class="w-full h-auto">
-              </div> -->
-              <div >
-                     <div>
-                            <h1 class="text-4xl font-semibold text-blue-950"> Kemudahan Akses Informasi Perusahaan dalam Satu Genggaman </h1>
-                            <p class="text-lg text-neutral-600"> Hanya butuh satu aplikasi untuk kantor. Dan seluruh fungsi komunikasi dan kolaborasi pekerjaan menjadi lebih mudah.</p>
+              <div class="flex items-center justify-between gap-10 mt-15">
+                     <div class="w-130 rounded-2xl bg-transparent">
+                            <img src="/image/solusi2.png" alt="" class="w-full h-auto">
                      </div>
-                     <div>
-                            <h1 class="text-2xl font-semibold"> Company Profile </h1>
-                                   <p> Sosialisasi profil dan visi misi perusahaan lebih mudah diakses seluruh internal perusahaan. </p>
-                            <h1 class="text-2xl font-semibold"> Board of Director </h1>
-                                   <p> Mengenal profil BOD dan jajaran stakeholder perusahaan cukup dalam satu halaman di aplikasi. </p>
-                            <h1 class="text-2xl font-semibold"> Employee Directory </h1>
-                                   <p> Akses direktori seluruh karyawan tanpa menambahkan kontak dan nomor HP. Memudahkan internal perushaan untuk berkomunikasi satu sama lain dengan tetap menjaga privasi masing-masing. </p>
-                            <h1 class="text-2xl font-semibold"> Document Management </h1>
-                                   <p>  Miliki file sharing sendiri untuk kemudahan akses dan dokumen-dokumen perusahaan untuk seluruh karyawan. </p>
+                     <div class="w-200">
+                            <div>
+                                   <h3 class="text-xl text-blue-400 mb-2"> COMPANY DIRECTORY </h3>
+                                   <h1 class="text-4xl font-semibold text-blue-950 mb-3"> Kemudahan Akses Informasi Perusahaan dalam Satu Genggaman </h1>
+                                   <p class="text-lg text-neutral-600"> Hanya butuh satu aplikasi untuk kantor. Dan seluruh fungsi komunikasi dan kolaborasi pekerjaan menjadi lebih mudah.</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6 mt-6">
+                                   <div class="max-w-md mx-auto">  
+                                          <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Company Profile </h1>
+                                          <p class="text-center text-neutral-600 "> Sosialisasi profil dan visi misi perusahaan lebih mudah diakses seluruh internal perusahaan. </p>
+                                   </div>
+                                   <div class="max-w-md mx-auto">
+                                          <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Board of Director </h1>
+                                          <p class="text-center text-neutral-600"> Mengenal profil BOD dan jajaran stakeholder perusahaan cukup dalam satu halaman di aplikasi. </p>
+                                   </div>
+                                   <div class="mt-3 max-w-md mx-auto">
+                                          <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Employee Directory </h1>
+                                          <p class="text-center text-neutral-600"> Akses direktori seluruh karyawan tanpa menambahkan kontak dan nomor HP. Memudahkan internal perushaan untuk berkomunikasi satu sama lain dengan tetap menjaga privasi masing-masing. </p>
+                                   </div>
+                                   <div class="mt-3 max-w-md mx-auto">
+                                          <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Document Management </h1>
+                                          <p class="text-center text-neutral-600">  Miliki file sharing sendiri untuk kemudahan akses dan dokumen-dokumen perusahaan untuk seluruh karyawan. </p>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+       </div>
+
+       <div class="bg-purple-200 min-h-screen py-15 px-25">
+              <div class="flex items-center justify-between gap-10 mt-15">
+                     <div class="w-200">
+                            <div>
+                                   <h3 class="text-xl text-blue-400 mb-2"> INTERNAL MESSAGING </h3>
+                                   <h1 class="text-4xl font-semibold text-blue-950 mb-3"> Platform Chat yang Dirancang Khusus untuk Kolaborasi Internal </h1>
+                                   <p class="text-lg text-neutral-600"> Hanya butuh satu aplikasi untuk kantor. Dan seluruh fungsi komunikasi dan kolaborasi pekerjaan menjadi lebih mudah.</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6 mt-6">
+                                   <div class="max-w-md mx-auto">  
+                                          <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Company Profile </h1>
+                                          <p class="text-center text-neutral-600 "> Sosialisasi profil dan visi misi perusahaan lebih mudah diakses seluruh internal perusahaan. </p>
+                                   </div>
+                                   <div class="max-w-md mx-auto">
+                                          <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Board of Director </h1>
+                                          <p class="text-center text-neutral-600"> Mengenal profil BOD dan jajaran stakeholder perusahaan cukup dalam satu halaman di aplikasi. </p>
+                                   </div>
+                                   <div class="mt-3 max-w-md mx-auto">
+                                          <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Employee Directory </h1>
+                                          <p class="text-center text-neutral-600"> Akses direktori seluruh karyawan tanpa menambahkan kontak dan nomor HP. Memudahkan internal perushaan untuk berkomunikasi satu sama lain dengan tetap menjaga privasi masing-masing. </p>
+                                   </div>
+                                   <div class="mt-3 max-w-md mx-auto">
+                                          <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Document Management </h1>
+                                          <p class="text-center text-neutral-600">  Miliki file sharing sendiri untuk kemudahan akses dan dokumen-dokumen perusahaan untuk seluruh karyawan. </p>
+                                   </div>
+                            </div>
                      </div>
               </div>
        </div>
