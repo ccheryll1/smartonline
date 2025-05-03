@@ -69,6 +69,8 @@
     
     @include('pages.solusi')
     @include('pages.harga')
+    @include('pages.contact')
     @include('pages.footer')
+    
 </body>
 </html>        

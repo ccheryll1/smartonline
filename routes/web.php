@@ -33,6 +33,10 @@ Route::get('/footer', function () {
     return view('pages.footer');
 });
 
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+
 // CRUD Absensi dari folder "attendances"
 Route::get('/attendances', [AttendanceController::class, 'index'])->name('attendances.index');
 Route::get('/attendances/create', [AttendanceController::class, 'create'])->name('attendances.create');
