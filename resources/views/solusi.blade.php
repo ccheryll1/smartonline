@@ -72,7 +72,7 @@
                                    <h1 class="text-4xl font-semibold text-blue-950 mb-3"> Platform Chat yang Dirancang Khusus untuk Kolaborasi Internal </h1>
                                    <!-- <p class="text-lg text-neutral-600"> Hanya butuh satu aplikasi untuk kantor. Dan seluruh fungsi komunikasi dan kolaborasi pekerjaan menjadi lebih mudah.</p> -->
                             </div>
-                            <div class="grid grid-flow-col grid-rows-3  mt-6">
+                            <div class="grid grid-flow-col grid-rows-3 mt-6">
                                    <div class="max-w-md mx-auto">  
                                           <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Personal Chat </h1>
                                           <p class="text-center text-neutral-600 "> Percakapan personal dengan kemudahan akses kontak seluruh karyawan perusahaan. </p>
@@ -98,10 +98,39 @@
                      </div>
                      <div class="w-130 rounded-2xl bg-transparent">
                             <img src="/image/solusi3.png" alt="" class="w-full h-auto">
-                     </div>
-
+                     </div> 
               </div>
        </div>
+
+       <div class="bg-green-100 min-h-screen py-15 px-25">
+              <div class="flex items-center justify-between gap-10 mt-15">
+                     <div class="w-130 rounded-2xl bg-transparent">
+                            <img src="/image/solusi4.png" alt="" class="w-full h-auto">
+                     </div>
+                     <div class="w-200">
+                            <div>
+                                   <h3 class="text-xl text-blue-400 mb-2"> TASK MANAGEMENT </h3>
+                                   <h1 class="text-4xl font-semibold text-blue-950 mb-3"> Management Penugasan Sederhana tapi Mudah dan Powerful </h1>
+                                   <p class="text-lg text-neutral-600"> Hanya butuh satu aplikasi untuk kantor. Dan seluruh fungsi komunikasi dan kolaborasi pekerjaan menjadi lebih mudah.</p>
+                            </div>
+                            <div>
+                                   <div>
+                                          <h1> Task & Event </h1>
+                                          <p> Assign tugas, kolaborasi dan membuat agenda pekerjaan menjadi lebih mudah. Dibekali fitur tagging karyawan, notifikasi, comment untuk memastikan semua tim bekerja sama dengan baik. </p>
+                                   </div>
+                                   <div>
+                                          <h1> Notes </h1>
+                                          <p> Buat catatan sendiri atau bersama. Beri akses ke seluruh tim untuk memudahkan kolaborasi. Dibekali attachment, kolom diskusi, tagging dan manajemen role user. </p>
+                                   </div>
+                                   <div>
+                                          <h1> Calendar  </h1>
+                                          <p> Seluruh timeline aktivitas, meeting maupun penugasan ada di satu kalender yang terintegrasi. Pastikan semua berjalan sesuai rencana. </p>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+       </div>
+
 
 </body>
 </html>
