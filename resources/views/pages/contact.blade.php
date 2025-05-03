@@ -7,6 +7,15 @@
     @vite(['resources/css/app.css'])
 </head>
 <body class="bg-gray-100 font-sans">
+    {{-- CENTER TEXT  --}}
+    <div class="text-center py-8">
+        <h2 class="text-3xl font-bold">
+            <span class="text-gray-800">Pick a Plan</span>
+            <span class="text-indigo-800">that Works</span>
+            <span class="text-gray-800">for Your Business</span>
+        </h2>
+        <p class="text-gray-600 mt-2">Temukan pilihan layanan yang tepat untuk kebutuhan komunikasi perusahaan Anda</p>
+    </div>
     <div class="flex justify-center items-center min-h-screen px-6">
         <div class="flex flex-col md:flex-row items-center w-full max-w-4xl">
             <!-- Left Section: Title -->
