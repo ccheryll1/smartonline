@@ -67,8 +67,8 @@
 
     </div>
     
-    @include('solusi')
-    @include('harga')
-    @include('footer')
+    @include('pages.solusi')
+    @include('pages.harga')
+    @include('pages.footer')
 </body>
 </html>        
