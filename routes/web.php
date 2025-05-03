@@ -3,39 +3,38 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AttendanceController;
 
-//ini dummy cuma buat preview
+// Route untuk preview dummy
 Route::get('/preview', function () {
-    return view('preview');
+    return view('pages.preview'); // Sesuaikan dengan folder "pages"
 });
 
-
+// Halaman statis dari folder "pages"
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
 Route::get('/home', function () {
-    return view('home');
+    return view('pages.home');
 });
 
 Route::get('/harga', function () {
-    return view('harga');
+    return view('pages.harga');
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('pages.blog');
 });
 
 Route::get('/solusi', function () {
-    return view('solusi');
+    return view('pages.solusi');
 });
 
 Route::get('/footer', function () {
-    return view('footer');
+    return view('pages.footer');
 });
 
-
-//crud absensi
-Route::get('/attendances', [AttendanceController::class, 'index'])->name('attendances.index'); // Ganti dari '/' ke '/attendances'
+// CRUD Absensi dari folder "attendances"
+Route::get('/attendances', [AttendanceController::class, 'index'])->name('attendances.index');
 Route::get('/attendances/create', [AttendanceController::class, 'create'])->name('attendances.create');
 Route::post('/attendances', [AttendanceController::class, 'store'])->name('attendances.store');
 Route::get('/attendances/{attendance}/edit', [AttendanceController::class, 'edit'])->name('attendances.edit');
