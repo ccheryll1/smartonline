@@ -37,10 +37,3 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-// CRUD Absensi dari folder "attendances"
-Route::get('/attendances', [AttendanceController::class, 'index'])->name('attendances.index');
-Route::get('/attendances/create', [AttendanceController::class, 'create'])->name('attendances.create');
-Route::post('/attendances', [AttendanceController::class, 'store'])->name('attendances.store');
-Route::get('/attendances/{attendance}/edit', [AttendanceController::class, 'edit'])->name('attendances.edit');
-Route::put('/attendances/{attendance}', [AttendanceController::class, 'update'])->name('attendances.update');
-Route::delete('/attendances/{attendance}', [AttendanceController::class, 'destroy'])->name('attendances.destroy');
