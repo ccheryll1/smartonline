@@ -80,6 +80,25 @@
                      <!-- Tambahkan item-item lainnya dengan struktur yang sama -->
                  </div>
 
+                 {{-- INI JS NYAAA --}}
+                 {{-- <script>
+                     function toggleAccordion(element) {
+                         const content = element.nextElementSibling;
+                         const arrow = element.querySelector('svg');
+                         
+                         // Tutup semua accordion yang terbuka
+                         document.querySelectorAll('.hidden').forEach(item => {
+                             if (item !== content && !item.classList.contains('hidden')) {
+                                 item.classList.add('hidden');
+                                 item.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+                             }
+                         });
+                         
+                         // Toggle accordion yang diklik
+                         content.classList.toggle('hidden');
+                         arrow.classList.toggle('rotate-180');
+                     }
+                     </script> --}}
 
 
 
