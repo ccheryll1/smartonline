@@ -70,6 +70,7 @@
     @include('pages.solusi')
     @include('pages.harga')
     @include('pages.contact')
+    @include('pages.faq')
     @include('pages.footer')
     
 </body>

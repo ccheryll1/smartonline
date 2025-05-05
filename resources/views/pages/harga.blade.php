@@ -7,23 +7,6 @@
     <title>Harga - SmartOnline</title>
 </head>
 <body class="bg-white text-blue-900 ">
-    <!-- Navigation -->
-    {{-- <nav class="bg-white mx-auto mt-6 max-w-6xl rounded-full flex items-center justify-between px-5 py-3 shadow-lg">
-        <div class="text-xl font-bold text-blue-900">
-            <span class="bg-blue-900 text-white px-3 py-1 rounded-full">
-                SMART <span class="text-blue-300">ONLINE</span>
-            </span>
-        </div>
-        <ul class="flex items-center gap-20 fs-5 font-semibold text-blue-900">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">SOLUSI</a></li>
-            <li><a href="#">HARGA</a></li>
-        </ul>
-        <a href="#" class="flex items-center gap-2 bg-blue-900 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-md transition-all">
-            <img src="https://img.icons8.com/color/24/000000/whatsapp--v1.png" alt="WhatsApp" />
-            <span>Let's Talk</span>
-        </a>
-    </nav> --}}
 
     <!-- Main Container -->
     <div class="container mx-auto max-w-7xl mt-20">
