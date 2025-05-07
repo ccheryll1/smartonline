@@ -29,7 +29,7 @@
                 <div class="grid grid-cols-2 gap-6 mt-25">
                     <div class="bg-gray-100 p-4 rounded-4xl shadow-sm relative flex flex-col items-center text-center pt-8">
                             <!-- <div class="outline-3 outline-offset-2 outline-solid mt-7 py-3 px-16 w-150 rounded-4xl"> -->
-                            <img src="/image/bar-chart-squareup.png" alt="" class="w-10 h-10 bg-sky-700  rounded-full flex items-center justify-center text-white text-2xl absolute -top-5">
+                            <img src="/image/logo1.png" alt="" class="w-10 h-10 bg-sky-700  rounded-full flex items-center justify-center text-white text-2xl absolute -top-5">
                             <h1 class="text-2xl font-semibold">Laporan Keuangan Otomatis</h1>
                             <p>Laporan neraca, laba rugi, arus kas, hutang, piutang, jurnal, hingga buku besar dibuat secara otomatis dan real-time.</p>   
                      </div>
@@ -80,7 +80,7 @@
                  </div>
 
                  {{-- INI JS NYAAA --}}
-                 {{-- <script>
+                {{-- <script>
                      function toggleAccordion(element) {
                          const content = element.nextElementSibling;
                          const arrow = element.querySelector('svg');
@@ -97,7 +97,7 @@
                          content.classList.toggle('hidden');
                          arrow.classList.toggle('rotate-180');
                      }
-                     </script> 
+                     </script>  --}}
 
         </div>
 
