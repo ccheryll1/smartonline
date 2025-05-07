@@ -25,7 +25,7 @@
                                 </div>
                         </div>
                 </div>
-
+                
                 <div class="grid grid-cols-2 gap-6 mt-25">
                     <div class="bg-gray-100 p-4 rounded-4xl shadow-sm relative flex flex-col items-center text-center pt-8">
                             <!-- <div class="outline-3 outline-offset-2 outline-solid mt-7 py-3 px-16 w-150 rounded-4xl"> -->
@@ -53,7 +53,7 @@
                      </div>
                 </div>
                     
-
+                <div class="h-32"></div>  
                 {{-- BAGIAN FAQ ACCORDION --}}
                 <div>
                  <div class="space-y-2"> <!-- Container untuk semua item -->
