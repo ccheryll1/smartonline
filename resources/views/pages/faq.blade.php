@@ -34,16 +34,19 @@
                             <p>Laporan neraca, laba rugi, arus kas, hutang, piutang, jurnal, hingga buku besar dibuat secara otomatis dan real-time.</p>   
                      </div>
                      <div class="bg-gray-100 p-4 rounded-4xl shadow-sm relative flex flex-col items-center text-center pt-8">
+                        <img src="/image/logo3.png" alt="" class="w-10 h-10 bg-sky-700  rounded-full flex items-center justify-center text-white text-2xl absolute -top-5">
                             <!-- <div class="outline-3 outline-offset-2 outline-solid mt-7 py-3 px-16 w-150 rounded-4xl"> -->
                             <h1 class="text-2xl font-semibold">Catat Pengeluaran & Biaya Belanja</h1>
                             <p>Catat semua biaya pengeluaran dan biaya belanja selama periode yang tertentu dari dashboard majoo.</p>   
                      </div>
                      <div class="bg-gray-100 p-4 rounded-4xl shadow-sm relative flex flex-col items-center text-center pt-8">
                             <!-- <div class="outline-3 outline-offset-2 outline-solid mt-7 py-3 px-16 w-150 rounded-4xl"> -->
+                            <img src="/image/logo2.png" alt="" class="w-10 h-10 bg-sky-700  rounded-full flex items-center justify-center text-white text-2xl absolute -top-5">
                             <h1 class="text-2xl font-semibold">Kelola Transaksi dari Satu Dashboard</h1>
                             <p>Catat tanggal jatuh tempo pembayaran, cetak faktur, hingga mengirimkan faktur melalui email bisa dilakukan dalam satu dashboard.</p>   
                      </div>
                      <div class="bg-gray-100 p-4 rounded-4xl shadow-sm relative flex flex-col items-center text-center pt-8">
+                            <img src="/image/logo4.png" alt="" class="w-10 h-10 bg-sky-700  rounded-full flex items-center justify-center text-white text-2xl absolute -top-5">
                             <!-- <div class="outline-3 outline-offset-2 outline-solid mt-7 py-3 px-16 w-150 rounded-4xl"> -->
                             <h1 class="text-2xl font-semibold">Monitor Serta Kelola Kas dan Bank</h1>
                             <p>Lihat saldo dari Kas dan Bank outlet pada hari itu hingga buat transaksi, seperti transfer, terima, dan kirim uang.</p>   
