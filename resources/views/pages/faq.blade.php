@@ -53,7 +53,9 @@
                      </div>
                 </div>
                     
-        </div>
+
+                {{-- BAGIAN FAQ ACCORDION --}}
+                <div>
                  <div class="space-y-2"> <!-- Container untuk semua item -->
                      <div class="border-b border-gray-200">
                          <button class="flex justify-between items-center w-full py-4 text-left text-blue-900 hover:text-blue-700" onclick="toggleAccordion(this)">
@@ -78,12 +80,60 @@
                              <p class="text-gray-600">Detail informasi tentang penerimaan...</p>
                          </div>
                      </div>
+
+                     <div class="border-b border-gray-200">
+                        <button class="flex justify-between items-center w-full py-4 text-left text-blue-900 hover:text-blue-700" onclick="toggleAccordion(this)">
+                            <span class="text-lg">Biaya</span>
+                            <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hidden pb-4">
+                            <p class="text-gray-600">Detail informasi tentang penerimaan...</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-200">
+                        <button class="flex justify-between items-center w-full py-4 text-left text-blue-900 hover:text-blue-700" onclick="toggleAccordion(this)">
+                            <span class="text-lg">Kas Dan Bank</span>
+                            <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hidden pb-4">
+                            <p class="text-gray-600">Detail informasi tentang penerimaan...</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-200">
+                        <button class="flex justify-between items-center w-full py-4 text-left text-blue-900 hover:text-blue-700" onclick="toggleAccordion(this)">
+                            <span class="text-lg">Daftar Akun dan Buku Besar</span>
+                            <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hidden pb-4">
+                            <p class="text-gray-600">Detail informasi tentang penerimaan...</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-200">
+                        <button class="flex justify-between items-center w-full py-4 text-left text-blue-900 hover:text-blue-700" onclick="toggleAccordion(this)">
+                            <span class="text-lg">Laporan Keuangan</span>
+                            <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="hidden pb-4">
+                            <p class="text-gray-600">Detail informasi tentang penerimaan...</p>
+                        </div>
+                    </div>
                  
                      <!-- Tambahkan item-item lainnya dengan struktur yang sama -->
-                 </div>
+                </div>
 
                  {{-- INI JS NYAAA --}}
-                {{-- <script>
+                <script>
                      function toggleAccordion(element) {
                          const content = element.nextElementSibling;
                          const arrow = element.querySelector('svg');
@@ -100,8 +150,9 @@
                          content.classList.toggle('hidden');
                          arrow.classList.toggle('rotate-180');
                      }
-                     </script>  --}}
+                     </script> 
 
+                </div>
         </div>
 
         
