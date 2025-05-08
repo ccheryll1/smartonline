@@ -16,7 +16,7 @@ class AbsensiController extends Controller
 
     public function create()
     {
-        return view('absensi.create');
+        return view('backend.absensi.create');
     }
 
     public function store(Request $request)
@@ -58,7 +58,7 @@ class AbsensiController extends Controller
 
     public function edit(Absensi $absensi)
     {
-        return view('absensi.edit', compact('absensi'));
+        return view('backend.absensi.edit', compact('absensi'));
     }
 
     public function update(Request $request, Absensi $absensi)
@@ -92,12 +92,12 @@ class AbsensiController extends Controller
             'notes' => $request->notes,
         ]);
 
-        return redirect()->route('absensi.index')->with('success', 'Data absensi berhasil diperbarui.');
+        return redirect()->route('backend.absensi.index')->with('success', 'Data absensi berhasil diperbarui.');
     }
 
     public function destroy(Absensi $absensi)
     {
         $absensi->delete();
-        return redirect()->route('absensi.index')->with('success', 'Data absensi berhasil dihapus.');
+        return redirect()->route('backend.absensi.index')->with('success', 'Data absensi berhasil dihapus.');
     }
 }
