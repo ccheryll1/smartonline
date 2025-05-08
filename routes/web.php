@@ -37,3 +37,10 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
+// ROUTE KHUSUS / UNTUK BE
+
+Route::get('/dashboard', function () {
+    return view('backend.layouts.app');
+})->name('dashboard');
+
+Route::resource('absensi', AbsensiController::class);
