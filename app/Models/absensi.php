@@ -2,9 +2,22 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class absensi extends Model
+class Absensi extends Model
 {
-    //
+    use HasFactory;
+
+    protected $table = 'absensi';
+
+    protected $fillable = [
+        'nama_karyawan',
+        'clock_in',
+        'clock_out',
+        'overtime',
+        'picture',
+        'location',
+        'notes',
+    ];
 }
