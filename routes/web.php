@@ -37,9 +37,3 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-// BAGIAN BACKEND -> CRUD ABSENSI
-
-Route::get('/app', function () {
-    return view('layouts.app');
-});
-Route::resource('absensi', AbsensiController::class);
