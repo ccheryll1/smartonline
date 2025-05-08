@@ -44,3 +44,8 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 Route::resource('absensi', AbsensiController::class);
+
+
+Route::prefix('backend')->name('backend.')->group(function () {
+    Route::resource('absensi', AbsensiController::class);
+});
