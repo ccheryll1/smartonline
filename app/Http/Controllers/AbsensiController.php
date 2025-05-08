@@ -11,7 +11,7 @@ class AbsensiController extends Controller
     public function index()
     {
         $absensi = Absensi::all();
-        return view('absensi.index', compact('absensi'));
+        return view('backend.absensi.index', compact('absensi'));
     }
 
     public function create()
