@@ -1,15 +1,19 @@
-@extends('backend.layouts.app')
+@extends('backend.layout.app')
 
 @section('content')
     <div class="bg-white p-5 rounded-lg shadow-md">
         <!-- Header dengan Navigasi Tanggal dan Tombol -->
         <div class="flex justify-between items-center mb-5">
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-2">
                 <h1 class="text-xl font-bold text-gray-900">Attendance</h1>
                 <div class="flex items-center space-x-2 text-sm text-gray-700">
-                    <button class="hover:text-blue-600">&larr;</button>
+                    <button class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-gray-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
                     <span>Monday, 15 October</span>
-                    <button class="hover:text-blue-600">&rarr;</button>
+                    <button class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-gray-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
                 </div>
             </div>
             <div class="flex items-center space-x-2">
