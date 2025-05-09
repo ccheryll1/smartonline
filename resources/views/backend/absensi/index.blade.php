@@ -2,33 +2,69 @@
 
 @section('content')
     <div class="bg-white p-5 rounded-lg shadow-md">
-        <!-- Header dan Tombol Create -->
+        <!-- Header dengan Navigasi Tanggal dan Tombol -->
         <div class="flex justify-between items-center mb-5">
-            <h1 class="text-xl font-bold text-gray-900">Attendance</h1>
-            <a href="{{ route('absensi.create') }}" class="bg-blue-600 text-white px-3 py-1.5 rounded-lg hover:bg-blue-700 transition duration-200 text-sm">Add Attendance</a>
+            <div class="flex items-center space-x-4">
+                <h1 class="text-xl font-bold text-gray-900">Attendance</h1>
+                <div class="flex items-center space-x-2 text-sm text-gray-700">
+                    <button class="hover:text-blue-600">&larr;</button>
+                    <span>Monday, 15 October</span>
+                    <button class="hover:text-blue-600">&rarr;</button>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <a href="#" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg hover:bg-gray-300 transition duration-200 text-sm flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10l-5.5 5.5m0 0L1 12m6.5 3.5L12 10m6.5 3.5L23 12m-6.5-3.5L12 14"/></svg>
+                    Attendance Report
+                </a>
+                <a href="{{ route('absensi.create') }}" class="bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700 transition duration-200 text-sm flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                    Add Attendance
+                </a>
+            </div>
         </div>
 
         <!-- Summary Widgets -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
             <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
                 <h3 class="text-xs font-semibold text-gray-500 mb-1">Present Summary</h3>
-                <div class="flex items-baseline space-x-2">
-                    <p class="text-[30px] font-bold text-gray-900">{{ $absensi->where('clock_in', '!=', null)->count() }}</p>
-                    <span class="text-xs text-gray-400">vs yesterday</span>
+                <div class="space-y-2">
+                    <div class="flex items-baseline space-x-2">
+                        <p class="text-[30px] font-bold text-gray-900">{{ $absensi->where('clock_in', '!=', null)->count() }}</p>
+                        <span class="text-xs text-gray-400">vs yesterday</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-sm text-gray-700">
+                        <div><span class="font-medium">On time:</span> 265 <span class="text-gray-500">+12</span></div>
+                        <div><span class="font-medium">Late clock-in:</span> 62 <span class="text-gray-500">-6</span></div>
+                        <div><span class="font-medium">Early clock-in:</span> 224 <span class="text-gray-500">-6</span></div>
+                    </div>
                 </div>
             </div>
             <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
                 <h3 class="text-xs font-semibold text-gray-500 mb-1">Not Present Summary</h3>
-                <div class="flex items-baseline space-x-2">
-                    <p class="text-[30px] font-bold text-gray-900">{{ $absensi->where('clock_in', null)->count() }}</p>
-                    <span class="text-xs text-gray-400">vs yesterday</span>
+                <div class="space-y-2">
+                    <div class="flex items-baseline space-x-2">
+                        <p class="text-[30px] font-bold text-gray-900">{{ $absensi->where('clock_in', null)->count() }}</p>
+                        <span class="text-xs text-gray-400">vs yesterday</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-sm text-gray-700">
+                        <div><span class="font-medium">Absent:</span> 42 <span class="text-gray-500">+12</span></div>
+                        <div><span class="font-medium">No clock-in:</span> 36 <span class="text-gray-500">-6</span></div>
+                        <div><span class="font-medium">No clock-out:</span> 0 <span class="text-gray-500">0</span></div>
+                    </div>
                 </div>
             </div>
             <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
                 <h3 class="text-xs font-semibold text-gray-500 mb-1">Away Summary</h3>
-                <div class="flex items-baseline space-x-2">
-                    <p class="text-[30px] font-bold text-gray-900">0</p>
-                    <span class="text-xs text-gray-400">vs yesterday</span>
+                <div class="space-y-2">
+                    <div class="flex items-baseline space-x-2">
+                        <p class="text-[30px] font-bold text-gray-900">0</p>
+                        <span class="text-xs text-gray-400">vs yesterday</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                        <div><span class="font-medium">Day off:</span> 0 <span class="text-gray-500">-2</span></div>
+                        <div><span class="font-medium">Time off:</span> 0 <span class="text-gray-500">-6</span></div>
+                    </div>
                 </div>
             </div>
         </div>
