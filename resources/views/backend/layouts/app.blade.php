@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartOnline - Time Management</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Feather Icons CDN -->
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
@@ -26,5 +28,10 @@
     <main class="container mx-auto mt-6 px-6">
         @yield('content')
     </main>
+
+    <!-- Inisialisasi Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>
