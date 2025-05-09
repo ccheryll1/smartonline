@@ -1,4 +1,4 @@
-@extends('backend.layout.app')
+@extends('backend.layouts.app')
 
 @section('content')
     <div class="bg-white p-5 rounded-lg shadow-md">
@@ -8,21 +8,21 @@
                 <h1 class="text-xl font-bold text-gray-900">Attendance</h1>
                 <div class="flex items-center space-x-2 text-sm text-gray-700">
                     <button class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-gray-200">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                        <i data-feather="chevron-left" class="w-4 h-4"></i>
                     </button>
                     <span>Monday, 15 October</span>
                     <button class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-gray-200">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <i data-feather="chevron-right" class="w-4 h-4"></i>
                     </button>
                 </div>
             </div>
             <div class="flex items-center space-x-2">
                 <a href="#" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg hover:bg-gray-300 transition duration-200 text-sm flex items-center">
-                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10l-5.5 5.5m0 0L1 12m6.5 3.5L12 10m6.5 3.5L23 12m-6.5-3.5L12 14"/></svg>
+                    <i data-feather="download" class="w-4 h-4 mr-1"></i>
                     Attendance Report
                 </a>
                 <a href="{{ route('absensi.create') }}" class="bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700 transition duration-200 text-sm flex items-center">
-                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                    <i data-feather="plus" class="w-4 h-4 mr-1"></i>
                     Add Attendance
                 </a>
             </div>
