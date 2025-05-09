@@ -10,7 +10,7 @@
     <!-- Header -->
     <header class="bg-blue-900 text-white py-4">
         <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-4"> 
                 <span class="text-xl font-bold">LOGO</span>
                 <span class="text-lg">Time Management</span>
             </div>
