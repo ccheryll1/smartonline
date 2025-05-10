@@ -62,18 +62,52 @@
         <!-- Table -->
         <div class="overflow-x-auto">
             <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-100">
-                    <tr>
-                        <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Employee Name</th>
-                        <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Clock-in & Out</th>
-                        <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Overtime</th>
-                        <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Picture</th>
-                        <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Location</th>
-                        <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Note</th>
-                        <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Action</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
+<thead class="bg-gray-100">
+            <tr>
+                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full">
+                        <i class="fas fa-user text-gray-600"></i>
+                    </span>
+                    Employee Name
+                </th>
+                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full">
+                        <i class="fas fa-clock text-gray-600"></i>
+                    </span>
+                    Clock-in & Out
+                </th>
+                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full">
+                        <i class="fas fa-hourglass-half text-gray-600"></i>
+                    </span>
+                    Overtime
+                </th>
+                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full">
+                        <i class="fas fa-image text-gray-600"></i>
+                    </span>
+                    Picture
+                </th>
+                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full">
+                        <i class="fas fa-map-marker-alt text-gray-600"></i>
+                    </span>
+                    Location
+                </th>
+                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full">
+                        <i class="fas fa-sticky-note text-gray-600"></i>
+                    </span>
+                    Note
+                </th>
+                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                    <span class="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full">
+                        <i class="fas fa-cog text-gray-600"></i>
+                    </span>
+                    Action
+                </th>
+            </tr>
+        </thead>                <tbody class="bg-white divide-y divide-gray-200">
                     @forelse ($absensi as $data)
                         <tr>
                             <td class="px-4 py-3 flex items-center space-x-3">
