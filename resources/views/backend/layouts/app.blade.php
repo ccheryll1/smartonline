@@ -17,9 +17,9 @@
                 <span class="text-lg text-shadow-sm">Time Management</span>
             </div>
             <nav class="flex justify-center space-x-6">
-                <a href="{{ route('absensi.index') }}" class="{{ request()->routeIs('absensi.index') ? 'bg-white text-blue-900 rounded-full px-4 py-1' : 'hover:bg-blue-700' }} text-white transition duration-200">Absensi</a>
-                <a href="#" class="{{ request()->is('employee') ? 'bg-white text-blue-900 rounded-full px-4 py-1' : 'hover:bg-blue-700' }} text-white transition duration-200">Employee</a>
-                <a href="#" class="{{ request()->is('lokasi') ? 'bg-white text-blue-900 rounded-full px-4 py-1' : 'hover:bg-blue-700' }} text-white transition duration-200">Lokasi</a>
+                <a href="{{ route('absensi.index') }}" class="{{ request()->routeIs('absensi.index') ? 'bg-white text-blue-900' : '' }} px-4 py-1 transition duration-200 hover:bg-white hover:text-blue-900">Absensi</a>
+                <a href="#" class="{{ request()->is('employee') ? 'bg-white text-blue-900' : '' }} px-4 py-1 transition duration-200 hover:bg-white hover:text-blue-900">Employee</a>
+                <a href="#" class="{{ request()->is('lokasi') ? 'bg-white text-blue-900' : '' }} px-4 py-1 transition duration-200 hover:bg-white hover:text-blue-900">Lokasi</a>
             </nav>
         </div>
     </header>
