@@ -8,7 +8,7 @@
 </head>
 <body>
        <footer class="bg-gray-800 text-gray-300">
-              <div class="mx-25 flex flex-row py-15 space-x-9">
+              <div class="mx-20 flex flex-row py-15 space-x-9">
                      <div> <img src="/images/smartdigitaltech.png" alt=""></div>
                      <div class="w-150 text-lg ">
                             <p class="mb-5"> Aplikasi chat task kantor untuk komunikasi dan kolaborasi yang dilengkapi smart personalia untuk membantu pengelolaan komunikasi internal perusahaan yang efektif dan efisien. </p>
