@@ -86,7 +86,7 @@
                                    </div>
                                    <div class="max-w-md mx-auto">
                                           <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Chat Bot </h1>
-                                          <nal class="text-center text-neutral-600"> Optimalkan fungsi percakapan internal perusahaan dengan menggunakan automasi chat bot yang bisa disesuaikan dengan kebutuhan perusahaan. </p>
+                                          <p class="text-center text-neutral-600"> Optimalkan fungsi percakapan internal perusahaan dengan menggunakan automasi chat bot yang bisa disesuaikan dengan kebutuhan perusahaan. </p>
                                    </div>
                                    <div class="max-w-md mx-auto">
                                           <h1 class="mb-2 text-center text-2xl font-semibold text-blue-950"> Sticker </h1>
