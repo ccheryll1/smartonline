@@ -11,15 +11,15 @@
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
     <header class="bg-blue-900 text-white py-3 shadow-md">
-        <div class="container mx-auto flex justify-between items-center px-6">
+        <div class="container mx-auto flex items-center justify-between px-6">
             <div class="flex items-center space-x-4">
                 <span class="text-xl font-bold text-shadow-sm">LOGO</span>
                 <span class="text-lg text-shadow-sm">Time Management</span>
             </div>
-            <nav class="space-x-4">
-                <a href="{{ route('absensi.index') }}" class="{{ request()->routeIs('absensi.index') ? 'bg-blue-700' : 'hover:bg-blue-700' }} px-4 py-2 rounded transition duration-200">Absensi</a>
-                <a href="#" class="hover:bg-blue-700 px-4 py-2 rounded transition duration-200">Employee</a>
-                <a href="#" class="hover:bg-blue-700 px-4 py-2 rounded transition duration-200">Lokasi</a>
+            <nav class="flex justify-center space-x-6">
+                <a href="{{ route('absensi.index') }}" class="{{ request()->routeIs('absensi.index') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 hover:bg-white hover:text-blue-900 hover:rounded-lg">Absensi</a>
+                <a href="#" class="{{ request()->is('employee') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 hover:bg-white hover:text-blue-900 hover:rounded-lg">Employee</a>
+                <a href="#" class="{{ request()->is('lokasi') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 hover:bg-white hover:text-blue-900 hover:rounded-lg">Lokasi</a>
             </nav>
         </div>
     </header>

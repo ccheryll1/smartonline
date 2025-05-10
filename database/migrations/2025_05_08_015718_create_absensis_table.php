@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('absensis', function (Blueprint $table) {
             $table->id();
             $table->string('nama_karyawan');
-            $table->time('clock_in');
-            $table->time('clock_out');
+            $table->datetime('clock_in')->nullable();
+            $table->datetime('clock_out')->nullable();
             $table->time('overtime')->nullable();
             $table->string('picture')->nullable();
             $table->string('location')->nullable();

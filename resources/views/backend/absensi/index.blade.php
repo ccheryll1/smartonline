@@ -29,47 +29,17 @@
         </div>
 
         <!-- Summary Widgets -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
-            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
-                <h3 class="text-xs font-semibold text-gray-500 mb-1">Present Summary</h3>
-                <div class="space-y-2">
-                    <div class="flex items-baseline space-x-2">
-                        <p class="text-[30px] font-bold text-gray-900">{{ $absensi->where('clock_in', '!=', null)->count() }}</p>
-                        <span class="text-xs text-gray-400">vs yesterday</span>
-                    </div>
-                    <div class="grid grid-cols-3 gap-2 text-sm text-gray-700">
-                        <div><span class="font-medium">On time:</span> 265 <span class="text-gray-500">+12</span></div>
-                        <div><span class="font-medium">Late clock-in:</span> 62 <span class="text-gray-500">-6</span></div>
-                        <div><span class="font-medium">Early clock-in:</span> 224 <span class="text-gray-500">-6</span></div>
-                    </div>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+            <!-- Kehadiran -->
+            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-center">
+                <h3 class="text-xs font-semibold text-gray-500 mb-2">Kehadiran</h3>
+                <p class="text-[30px] font-bold text-gray-900">{{ $absensi->where('clock_in', '!=', null)->count() }}</p>
             </div>
-            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
-                <h3 class="text-xs font-semibold text-gray-500 mb-1">Not Present Summary</h3>
-                <div class="space-y-2">
-                    <div class="flex items-baseline space-x-2">
-                        <p class="text-[30px] font-bold text-gray-900">{{ $absensi->where('clock_in', null)->count() }}</p>
-                        <span class="text-xs text-gray-400">vs yesterday</span>
-                    </div>
-                    <div class="grid grid-cols-3 gap-2 text-sm text-gray-700">
-                        <div><span class="font-medium">Absent:</span> 42 <span class="text-gray-500">+12</span></div>
-                        <div><span class="font-medium">No clock-in:</span> 36 <span class="text-gray-500">-6</span></div>
-                        <div><span class="font-medium">No clock-out:</span> 0 <span class="text-gray-500">0</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
-                <h3 class="text-xs font-semibold text-gray-500 mb-1">Away Summary</h3>
-                <div class="space-y-2">
-                    <div class="flex items-baseline space-x-2">
-                        <p class="text-[30px] font-bold text-gray-900">0</p>
-                        <span class="text-xs text-gray-400">vs yesterday</span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
-                        <div><span class="font-medium">Day off:</span> 0 <span class="text-gray-500">-2</span></div>
-                        <div><span class="font-medium">Time off:</span> 0 <span class="text-gray-500">-6</span></div>
-                    </div>
-                </div>
+
+            <!-- Tidak Hadir -->
+            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-center">
+                <h3 class="text-xs font-semibold text-gray-500 mb-2">Tidak Hadir</h3>
+                <p class="text-[30px] font-bold text-gray-900">{{ $absensi->where('clock_in', null)->count() }}</p>
             </div>
         </div>
 
@@ -86,7 +56,6 @@
                 <option>Attendance Filter</option>
                 <option>Present</option>
                 <option>Not Present</option>
-                <option>Away</option>
             </select>
         </div>
 
@@ -114,7 +83,10 @@
                                     <p class="text-xs text-gray-500">Mandor</p>
                                 </div>
                             </td>
-                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->clock_in }} - {{ $data->clock_out }}</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">
+                                {{ \Carbon\Carbon::parse($data->clock_in)->format('d/m/Y H:i') }} - 
+                                {{ \Carbon\Carbon::parse($data->clock_out)->format('d/m/Y H:i') }}
+                            </td>
                             <td class="px-4 py-3 text-sm text-gray-700">{{ $data->overtime ?? '0h 0m' }}</td>
                             <td class="px-4 py-3 text-sm text-gray-700">{{ $data->picture ?? 'N/A' }}</td>
                             <td class="px-4 py-3 text-sm text-gray-700">{{ $data->location ?? 'N/A' }}</td>
