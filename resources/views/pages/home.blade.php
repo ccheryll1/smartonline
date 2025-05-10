@@ -10,7 +10,7 @@
 
 <body>
     <div class="bg-blue-900 min-h-screen">
-        <nav class="bg-white fixed top-0 left-0 right-0 mx-auto max-w-6xl rounded-full flex items-center justify-between px-5 py-3 shadow-lg mt-6 z-50">
+        <nav class="bg-white fixed top-0 left-0 right-0 mx-auto max-w-6xl rounded-full flex items-center justify-between px-5 py-2 shadow-lg mt-6 z-50">
             <!-- Logo -->
             <div class="text-xl font-bold text-blue-900">
                 <span class="bg-blue-900 text-white px-3 py-1 rounded-full">
@@ -34,7 +34,7 @@
         </nav>
 
         <!-- buat ngasih jarak karena nav fixed -->
-        <div class="h-32"></div>    
+        <div class="h-25"></div>    
 
         <!-- Content Section -->
         <div class="container mx-auto max-w-6xl text-white mt-3">
@@ -45,21 +45,21 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Kolom laptop + button -->
             <div class="flex flex-col items-center">
-                <img src="/image/laptop.png" alt="Gambar" class="w-full h-auto rounded-lg shadow-lg max-w-[500px] mb-8">
-                <a href="#" class="bg-white text-blue-500 hover:bg-blue-500 hover:text-white px-25 py-3 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300">
+                <img src="/image/laptop.png" alt="Gambar" class="w-full h-auto rounded-lg shadow-lg max-w-[450px] mb-8">
+                <a href="#" class="bg-white text-blue-500 hover:bg-blue-500 hover:text-white px-25 py-2 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300">
                     Request Demo
                 </a>
             </div>
 
             <!-- Kolom teks -->
             <div class="flex flex-col justify-center text-white self-start">
-                <h1 class="text-4xl font-semibold tracking-wide mb-3"> Pengembangan system </h1>
+                <h1 class="text-4xl font-semibold tracking-wide mb-2"> Pengembangan system </h1>
                 <p class="text-lg"> Design dan mengembangkan system sesuai kebutuhan perusahaan </p>
 
-                <h1 class="text-4xl font-semibold tracking-wide mb-3 mt-7"> Berlangganan per bulan </h1>
+                <h1 class="text-4xl font-semibold tracking-wide mb-2 mt-4"> Berlangganan per bulan </h1>
                 <p class="text-lg"> Pilih fitur aplikasi sesuai kebutuhan perusahaan anda </p>
 
-                <h1 class="text-4xl font-semibold tracking-wide mb-3 mt-8"> Design ulang aplikasi anda </h1>
+                <h1 class="text-4xl font-semibold tracking-wide mb-2 mt-4"> Design ulang aplikasi anda </h1>
                 <p class="text-lg"> Improve the performance of an application by re-design your UI application system </p>
             </div>
         </div>
