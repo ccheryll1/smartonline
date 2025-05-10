@@ -114,7 +114,7 @@
                                 <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full w-10 h-10">
                                 <div>
                                     <p class="text-sm font-medium text-gray-900">{{ $data->nama_karyawan }}</p>
-                                    <p class="text-xs text-gray-500">Orang Sigma 🥶</p>
+                                    
                                 </div>
                             </td>
                             <td class="px-4 py-3 text-sm text-gray-700">
