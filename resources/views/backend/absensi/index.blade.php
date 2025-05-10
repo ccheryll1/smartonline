@@ -29,7 +29,7 @@
         </div>
 
         <!-- Summary Widgets -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
             <!-- Kehadiran -->
             <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-center">
                 <h3 class="text-xs font-semibold text-gray-500 mb-2">Kehadiran</h3>
@@ -80,7 +80,7 @@
                                 <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full w-10 h-10">
                                 <div>
                                     <p class="text-sm font-medium text-gray-900">{{ $data->nama_karyawan }}</p>
-                                    <p class="text-xs text-gray-500">Mandor</p>
+                                    <p class="text-xs text-gray-500">Orang Sigma 🥶</p>
                                 </div>
                             </td>
                             <td class="px-4 py-3 text-sm text-gray-700">
