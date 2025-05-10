@@ -17,9 +17,9 @@
                 <span class="text-lg text-shadow-sm">Time Management</span>
             </div>
             <nav class="flex justify-center space-x-6">
-                <a href="{{ route('absensi.index') }}" class="{{ request()->routeIs('absensi.index') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 transition duration-200 hover:bg-white hover:text-blue-900 hover:rounded-lg">Absensi</a>
-                <a href="#" class="{{ request()->is('employee') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 transition duration-200 hover:bg-white hover:text-blue-900 hover:rounded-lg">Employee</a>
-                <a href="#" class="{{ request()->is('lokasi') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 transition duration-200 hover:bg-white hover:text-blue-900 hover:rounded-lg">Lokasi</a>
+                <a href="{{ route('absensi.index') }}" class="{{ request()->routeIs('absensi.index') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 hover:bg-white hover:text-blue-900 hover:rounded-lg">Absensi</a>
+                <a href="#" class="{{ request()->is('employee') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 hover:bg-white hover:text-blue-900 hover:rounded-lg">Employee</a>
+                <a href="#" class="{{ request()->is('lokasi') ? 'bg-white text-blue-900 rounded-lg' : '' }} px-4 py-1 hover:bg-white hover:text-blue-900 hover:rounded-lg">Lokasi</a>
             </nav>
         </div>
     </header>
