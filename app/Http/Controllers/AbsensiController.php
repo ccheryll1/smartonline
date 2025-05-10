@@ -65,8 +65,8 @@ class AbsensiController extends Controller
     {
         $request->validate([
             'nama_karyawan' => 'required|string|max:255',
-            'clock_in' => 'required',
-            'clock_out' => 'required',
+            'clock_in' => 'nullable',
+            'clock_out' => 'nullable',
             'picture' => 'nullable|string',
             'location' => 'nullable|string',
             'notes' => 'nullable|string',
