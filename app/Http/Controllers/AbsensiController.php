@@ -33,21 +33,28 @@ class AbsensiController extends Controller
         $clockIn = Carbon::parse($request->clock_in);
         $clockOut = Carbon::parse($request->clock_out);
 
-        $regularEndTime = Carbon::parse('17:00:00'); // Jam kerja selesai pukul 17:00
-        $regularHours = 7; // Durasi kerja normal (10:00 - 17:00 = 7 jam)
+        // Set regularEndTime menggunakan tanggal yang sama dengan clock_in
+        $regularEndTime = Carbon::parse($clockIn->format('Y-m-d') . ' 17:00:00');
 
-        $totalHours = $clockIn->diffInHours($clockOut);
-        $overtime = 0;
-
+        $overtimeMinutes = 0;
+        // Hanya hitung overtime jika clockOut lebih dari regularEndTime
         if ($clockOut->greaterThan($regularEndTime)) {
-            $overtime = $clockOut->diffInHours($regularEndTime);
+            $overtimeMinutes = $clockOut->diffInMinutes($regularEndTime);
+        }
+
+        // Format overtime
+        $overtime = '00:00:00';
+        if ($overtimeMinutes > 0) {
+            $overtimeHours = floor($overtimeMinutes / 60);
+            $remainingMinutes = $overtimeMinutes % 60;
+            $overtime = sprintf('%02d:%02d:00', $overtimeHours, $remainingMinutes);
         }
 
         Absensi::create([
             'nama_karyawan' => $request->nama_karyawan,
             'clock_in' => $clockIn,
             'clock_out' => $clockOut,
-            'overtime' => gmdate('H:i:s', $overtime * 3600), // Konversi jam ke format H:i:s
+            'overtime' => $overtime,
             'picture' => $request->picture,
             'location' => $request->location,
             'notes' => $request->notes,

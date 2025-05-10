@@ -16,10 +16,12 @@
                 <span class="text-xl font-bold text-shadow-sm">LOGO</span>
                 <span class="text-lg text-shadow-sm">Time Management</span>
             </div>
-            <nav class="space-x-4">
-                <a href="{{ route('absensi.index') }}" class="{{ request()->routeIs('absensi.index') ? 'bg-blue-700' : 'hover:bg-blue-700' }} px-4 py-2 rounded transition duration-200">Absensi</a>
-                <a href="#" class="hover:bg-blue-700 px-4 py-2 rounded transition duration-200">Employee</a>
-                <a href="#" class="hover:bg-blue-700 px-4 py-2 rounded transition duration-200">Lokasi</a>
+            <nav class="flex justify-center w-full">
+                <div class="space-x-4">
+                    <a href="{{ route('absensi.index') }}" class="{{ request()->routeIs('absensi.index') ? 'bg-blue-700' : 'hover:bg-blue-700' }} px-4 py-2 rounded transition duration-200">Absensi</a>
+                    <a href="#" class="hover:bg-blue-700 px-4 py-2 rounded transition duration-200">Employee</a>
+                    <a href="#" class="hover:bg-blue-700 px-4 py-2 rounded transition duration-200">Lokasi</a>
+                </div>
             </nav>
         </div>
     </header>
