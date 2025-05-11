@@ -18,6 +18,11 @@ class Absensi extends Model
         'overtime',
         'picture',
         'location',
-        'notes',
+        'notes'
+    ];
+
+    protected $casts = [
+        'clock_in' => 'datetime',
+        'clock_out' => 'datetime'
     ];
 }
