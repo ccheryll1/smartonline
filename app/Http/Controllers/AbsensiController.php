@@ -33,39 +33,10 @@ class AbsensiController extends Controller
         $clockIn = Carbon::parse($request->clock_in);
         $clockOut = Carbon::parse($request->clock_out);
 
-        // Set jam kerja normal
-        $regularStartTime = Carbon::parse($clockIn->format('Y-m-d') . ' 10:00:00');
-        $regularEndTime = Carbon::parse($clockIn->format('Y-m-d') . ' 17:00:00');
-
-        // Hitung overtime
-        $overtime = '00:00:00';
-        
-        // Cek apakah masuk tepat waktu dan pulang lebih dari jam normal
-        if ($clockOut->greaterThan($regularEndTime)) {
-            // Jika terlambat, kurangi overtime dengan keterlambatan
-            $lateMinutes = 0;
-            if ($clockIn->greaterThan($regularStartTime)) {
-                $lateMinutes = $clockIn->diffInMinutes($regularStartTime);
-            }
-            
-            // Hitung total overtime
-            $overtimeMinutes = $clockOut->diffInMinutes($regularEndTime);
-            
-            // Kurangi overtime dengan keterlambatan
-            $actualOvertimeMinutes = max(0, $overtimeMinutes - $lateMinutes);
-            
-            if ($actualOvertimeMinutes > 0) {
-                $overtimeHours = floor($actualOvertimeMinutes / 60);
-                $remainingMinutes = $actualOvertimeMinutes % 60;
-                $overtime = sprintf('%02d:%02d:00', $overtimeHours, $remainingMinutes);
-            }
-        }
-
         Absensi::create([
             'nama_karyawan' => $request->nama_karyawan,
             'clock_in' => $clockIn,
             'clock_out' => $clockOut,
-            'overtime' => $overtime,
             'picture' => $request->picture,
             'location' => $request->location,
             'notes' => $request->notes,
@@ -88,26 +59,10 @@ class AbsensiController extends Controller
         $clockIn = Carbon::parse($request->clock_in);
         $clockOut = Carbon::parse($request->clock_out);
 
-        // Set jam kerja normal (10:00 - 17:00)
-        $regularStartTime = Carbon::parse($clockIn->format('Y-m-d') . ' 10:00:00');
-        $regularEndTime = Carbon::parse($clockIn->format('Y-m-d') . ' 17:00:00');
-
-        // Default overtime
-        $overtime = '00:00:00';
-
-        // Hitung overtime hanya jika masuk tepat/lebih awal dan pulang lebih dari jam 17:00
-        if ($clockIn->lessThanOrEqualTo($regularStartTime) && $clockOut->greaterThan($regularEndTime)) {
-            $overtimeMinutes = $clockOut->diffInMinutes($regularEndTime);
-            $overtimeHours = floor($overtimeMinutes / 60);
-            $remainingMinutes = $overtimeMinutes % 60;
-            $overtime = sprintf('%02d:%02d:00', $overtimeHours, $remainingMinutes);
-        }
-
         $absensi->update([
             'nama_karyawan' => $request->nama_karyawan,
             'clock_in' => $clockIn,
             'clock_out' => $clockOut,
-            'overtime' => $overtime,
             'picture' => $request->picture,
             'location' => $request->location,
             'notes' => $request->notes,
@@ -121,43 +76,9 @@ class AbsensiController extends Controller
         return view('backend.absensi.edit', compact('absensi'));
     }
 
-    public function update(Request $request, Absensi $absensi)
-    {
-        $request->validate([
-            'nama_karyawan' => 'required|string|max:255',
-            'clock_in' => 'nullable',
-            'clock_out' => 'nullable',
-            'picture' => 'nullable|string',
-            'location' => 'nullable|string',
-            'notes' => 'nullable|string',
-        ]);
-
-        $clockIn = Carbon::parse($request->clock_in);
-        $clockOut = Carbon::parse($request->clock_out);
-
-        $regularEndTime = Carbon::parse('17:00:00');
-        $overtime = 0;
-
-        if ($clockOut->greaterThan($regularEndTime)) {
-            $overtime = $clockOut->diffInHours($regularEndTime);
-        }
-
-        $absensi->update([
-            'nama_karyawan' => $request->nama_karyawan,
-            'clock_in' => $clockIn,
-            'clock_out' => $clockOut,
-            'overtime' => gmdate('H:i:s', $overtime * 3600),
-            'picture' => $request->picture,
-            'location' => $request->location,
-            'notes' => $request->notes,
-        ]);
-
-        return redirect()->route('backend.absensi.index')->with('success', 'Data absensi berhasil diperbarui.');
-    }
-
     public function destroy(Absensi $absensi)
     {
         $absensi->delete();
-        return redirect()->route('backend.absensi.index')->with('success', 'Data absensi berhasil dihapus.');
+        return redirect()->route('absensi.index')->with('success', 'Data absensi berhasil dihapus.');
     }
 }

@@ -121,10 +121,10 @@
                                 {{ \Carbon\Carbon::parse($data->clock_in)->format('d/m/Y H:i') }} - 
                                 {{ \Carbon\Carbon::parse($data->clock_out)->format('d/m/Y H:i') }}
                             </td>
-                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->overtime ?? '0h 0m' }}</td>
-                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->picture ?? 'N/A' }}</td>
-                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->location ?? 'N/A' }}</td>
-                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->notes ?? 'N/A' }}</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->overtime  }}</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->picture  }}</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->location  }}</td>
+                            <td class="px-4 py-3 text-sm text-gray-700">{{ $data->notes  }}</td>
                             <td class="px-4 py-3 whitespace-nowrap space-x-2">
                                 <a href="{{ route('absensi.edit', $data->id) }}" class="px-2 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-200 text-xs">Edit</a>
                                 <form action="{{ route('absensi.destroy', $data->id) }}" method="POST" class="inline">
