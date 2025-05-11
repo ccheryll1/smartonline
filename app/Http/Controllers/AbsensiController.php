@@ -33,19 +33,32 @@ class AbsensiController extends Controller
         $clockIn = Carbon::parse($request->clock_in);
         $clockOut = Carbon::parse($request->clock_out);
 
-        // Set jam kerja normal (10:00 - 17:00)
+        // Set jam kerja normal
         $regularStartTime = Carbon::parse($clockIn->format('Y-m-d') . ' 10:00:00');
         $regularEndTime = Carbon::parse($clockIn->format('Y-m-d') . ' 17:00:00');
 
-        // Default overtime
+        // Hitung overtime
         $overtime = '00:00:00';
-
-        // Hitung overtime hanya jika masuk tepat/lebih awal dan pulang lebih dari jam 17:00
-        if ($clockIn->lessThanOrEqualTo($regularStartTime) && $clockOut->greaterThan($regularEndTime)) {
+        
+        // Cek apakah masuk tepat waktu dan pulang lebih dari jam normal
+        if ($clockOut->greaterThan($regularEndTime)) {
+            // Jika terlambat, kurangi overtime dengan keterlambatan
+            $lateMinutes = 0;
+            if ($clockIn->greaterThan($regularStartTime)) {
+                $lateMinutes = $clockIn->diffInMinutes($regularStartTime);
+            }
+            
+            // Hitung total overtime
             $overtimeMinutes = $clockOut->diffInMinutes($regularEndTime);
-            $overtimeHours = floor($overtimeMinutes / 60);
-            $remainingMinutes = $overtimeMinutes % 60;
-            $overtime = sprintf('%02d:%02d:00', $overtimeHours, $remainingMinutes);
+            
+            // Kurangi overtime dengan keterlambatan
+            $actualOvertimeMinutes = max(0, $overtimeMinutes - $lateMinutes);
+            
+            if ($actualOvertimeMinutes > 0) {
+                $overtimeHours = floor($actualOvertimeMinutes / 60);
+                $remainingMinutes = $actualOvertimeMinutes % 60;
+                $overtime = sprintf('%02d:%02d:00', $overtimeHours, $remainingMinutes);
+            }
         }
 
         Absensi::create([
