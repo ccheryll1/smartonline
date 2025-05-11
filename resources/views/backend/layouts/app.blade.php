@@ -6,7 +6,7 @@
     <title>SmartOnline - Time Management</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Feather Icons CDN -->
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -28,6 +28,17 @@
 
     <!-- Main Content -->
     <main class="container mx-auto mt-6 px-6">
+        @if(session('success'))
+        <script>
+            Swal.fire({
+                title: 'Berhasil!',
+                text: '{{ session("success") }}',
+                icon: 'success',
+                confirmButtonColor: '#3B82F6',
+                confirmButtonText: 'OK'
+            });
+        </script>
+        @endif
         @yield('content')
     </main>
     @yield('scripts')
