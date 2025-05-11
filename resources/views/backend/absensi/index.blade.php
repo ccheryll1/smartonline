@@ -118,8 +118,11 @@
                                 </div>
                             </td>
                             <td class="px-4 py-3 text-sm text-gray-700">
-                                {{ \Carbon\Carbon::parse($data->clock_in)->format('d/m/Y H:i') }} - 
-                                {{ \Carbon\Carbon::parse($data->clock_out)->format('d/m/Y H:i') }}
+                                @if($data->clock_in)
+                                    {{ $data->clock_in->format('d/m/Y H:i') }} - {{ $data->clock_out ? $data->clock_out->format('d/m/Y H:i') : 'Belum Clock Out' }}
+                                @else
+                                    Tidak Hadir
+                                @endif
                             </td>
                             <td class="px-4 py-3 text-sm text-gray-700">{{ $data->overtime  }}</td>
                             <td class="px-4 py-3 text-sm text-gray-700">{{ $data->picture  }}</td>
