@@ -30,7 +30,7 @@
     <main class="container mx-auto mt-6 px-6">
         @yield('content')
     </main>
-
+    @yield('scripts')
     <!-- Inisialisasi Feather Icons -->
     <script>
         feather.replace();

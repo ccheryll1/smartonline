@@ -130,10 +130,10 @@
                             <td class="px-4 py-3 text-sm text-gray-700">{{ $data->notes  }}</td>
                             <td class="px-4 py-3 whitespace-nowrap space-x-2">
                                 <a href="{{ route('absensi.edit', $data->id) }}" class="px-2 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-200 text-xs">Edit</a>
-                                <form action="{{ route('absensi.destroy', $data->id) }}" method="POST" class="inline">
+                                <form action="{{ route('absensi.destroy', $data->id) }}" method="POST" class="inline" onsubmit="confirmDelete(event)">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition duration-200 text-xs" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</button>
+                                    <button type="submit" class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition duration-200 text-xs">Hapus</button>
                                 </form>
                             </td>
                         </tr>
@@ -146,4 +146,37 @@
             </table>
         </div>
     </div>
+
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+function confirmDelete(event) {
+    event.preventDefault();
+    const form = event.target;
+    
+    Swal.fire({
+        title: 'Yakin ingin menghapus data ini?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3B82F6',
+        cancelButtonColor: '#6B7280',
+        confirmButtonText: 'Ya, Hapus',
+        cancelButtonText: 'Batal',
+        background: '#FFFFFF',
+        customClass: {
+            title: 'text-gray-900 text-lg font-bold',
+            content: 'text-gray-700',
+            confirmButton: 'bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded',
+            cancelButton: 'bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            form.submit();
+        }
+    });
+}
+</script>
+
+@endsection
 @endsection
