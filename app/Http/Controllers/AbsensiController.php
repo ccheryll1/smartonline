@@ -48,20 +48,19 @@ class AbsensiController extends Controller
     {
         $request->validate([
             'nama_karyawan' => 'required|string|max:255',
-            'clock_in' => 'required',
-            'clock_out' => 'required',
+            'clock_in' => 'nullable',
+            'clock_out' => 'nullable',
+            'overtime' => 'nullable',
             'picture' => 'nullable|string',
             'location' => 'nullable|string',
             'notes' => 'nullable|string',
         ]);
 
-        $clockIn = Carbon::parse($request->clock_in);
-        $clockOut = Carbon::parse($request->clock_out);
-
         $absensi->update([
             'nama_karyawan' => $request->nama_karyawan,
-            'clock_in' => $clockIn,
-            'clock_out' => $clockOut,
+            'clock_in' => $request->clock_in ? Carbon::parse($request->clock_in) : null,
+            'clock_out' => $request->clock_out ? Carbon::parse($request->clock_out) : null,
+            'overtime' => $request->overtime,
             'picture' => $request->picture,
             'location' => $request->location,
             'notes' => $request->notes,
